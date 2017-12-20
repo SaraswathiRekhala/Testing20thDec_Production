@@ -1,0 +1,24 @@
+{
+  "Procedure_2Cursors" : {
+    "procedureString" : "CALL HR.PROC2CURSORS(?,?)",
+    "parameters" : [ {
+      "name" : "REGIONSDATA",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "JOBSDATA",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  }
+}

@@ -1,1 +1,25 @@
-{ }
+{
+  "HrdbExecuteSV_DeptData" : {
+    "_id" : "wm-HrdbExecuteSV_DeptData-wm.ServiceVariable-1513747397547",
+    "name" : "HrdbExecuteSV_DeptData",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.testing20thdec_production.hrdb.models.query.SvDeptDataResponse",
+    "service" : "hrdb",
+    "operation" : "executeSV_DeptData",
+    "operationId" : "QueryExecutionController_executeSV_DeptData",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "QueryExecution"
+  }
+}

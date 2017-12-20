@@ -1,0 +1,318 @@
+{
+  "SV_InsertQuery" : {
+    "name" : "SV_InsertQuery",
+    "description" : "Insert Query",
+    "version" : "V2",
+    "queryString" : "insert into \"ALLTYPES_NEW_CHANGES\"(\"INT ID\",\"BYTE COL\",\"SHORT COL\",\"INT COL\",\"FLOAT COL\",\"DOUBLE COL\",\"BIGINT COL\",\"BIGDEC COL\",\"CHAR COL\",\"STRING COL\",\"BOOLEAN COL\",\"BOOLEAN_COL_Y_N\",\"DATETIME COL\",\"TIMESTAMP COL\",\"BLOB COL\",\"TEXT COL\",\"CLOB COL\") values(:PK_COLUMN,:BYTE_COLUMN,:SHORT_COLUMN,:INT_COLUMN,:FLOAT_COLUMN,:DOUBLE_COLUMN,:BIGINT_COLUMN,:BIGDEC_COLUMN,:CHAR_COLUMN,:STRING_COLUMN,:BOOLEAN_COLUMN,:BOOLEAN_Y_N_COLUMN,:DATETIME_COLUMN,:TIMESTAMP_COLUMN,:BLOB_COLUMN,:TEXT_COLUMN,:CLOB_COLUMN)",
+    "countQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : false,
+    "type" : "INSERT",
+    "parameters" : [ {
+      "name" : "PK_COLUMN",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "10",
+      "required" : true
+    }, {
+      "name" : "BYTE_COLUMN",
+      "type" : "byte",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "10",
+      "required" : true
+    }, {
+      "name" : "SHORT_COLUMN",
+      "type" : "short",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "101",
+      "required" : true
+    }, {
+      "name" : "INT_COLUMN",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "9191",
+      "required" : true
+    }, {
+      "name" : "FLOAT_COLUMN",
+      "type" : "float",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "12.1212",
+      "required" : true
+    }, {
+      "name" : "DOUBLE_COLUMN",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "12.122",
+      "required" : true
+    }, {
+      "name" : "BIGINT_COLUMN",
+      "type" : "big_integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "211221",
+      "required" : true
+    }, {
+      "name" : "BIGDEC_COLUMN",
+      "type" : "big_decimal",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "212121.212121",
+      "required" : true
+    }, {
+      "name" : "CHAR_COLUMN",
+      "type" : "character",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "S",
+      "required" : true
+    }, {
+      "name" : "STRING_COLUMN",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "gdjfhg",
+      "required" : true
+    }, {
+      "name" : "BOOLEAN_COLUMN",
+      "type" : "boolean",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : true,
+      "required" : true
+    }, {
+      "name" : "BOOLEAN_Y_N_COLUMN",
+      "type" : "character",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Y",
+      "required" : true
+    }, {
+      "name" : "DATETIME_COLUMN",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "2017-12-20T11:41:00",
+      "required" : true
+    }, {
+      "name" : "TIMESTAMP_COLUMN",
+      "type" : "timestamp",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : 1513750263000,
+      "required" : true
+    }, {
+      "name" : "BLOB_COLUMN",
+      "type" : "blob",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : { },
+      "required" : true
+    }, {
+      "name" : "TEXT_COLUMN",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "fsgfsdg",
+      "required" : true
+    }, {
+      "name" : "CLOB_COLUMN",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "dfsgdsfg",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : true,
+      "typeRef" : "com.testing20thdec_production.wmstudio.models.query.SvInsertQueryRequest",
+      "method" : "POST"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "java.lang.Integer",
+      "returns" : "ENTITY",
+      "responseType" : "SINGLE"
+    }
+  },
+  "SV_InsertQuery_ServerDef" : {
+    "name" : "SV_InsertQuery_ServerDef",
+    "description" : "SV_InsertQuery_ServerDef",
+    "version" : "V2",
+    "queryString" : "insert into \"ALLTYPES_NEW_CHANGES\"(\"INT ID\",\"BYTE COL\",\"SHORT COL\",\"INT COL\",\"FLOAT COL\",\"DOUBLE COL\",\"BIGINT COL\",\"BIGDEC COL\",\"CHAR COL\",\"STRING COL\",\"BOOLEAN COL\",\"BOOLEAN_COL_Y_N\",\"DATETIME COL\",\"TIMESTAMP COL\",\"BLOB COL\",\"TEXT COL\",\"CLOB COL\") values(:PK_COLUMN,:BYTE_COLUMN,:SHORT_COLUMN,:INT_COLUMN,:FLOAT_COLUMN,:DOUBLE_COLUMN,:BIGINT_COLUMN,:BIGDEC_COLUMN,:CHAR_COLUMN,:STRING_COLUMN,:BOOLEAN_COLUMN,:BOOLEAN_Y_N_COLUMN,:DATETIME_COLUMN,:TIMESTAMP_COLUMN,:BLOB_COLUMN,:TEXT_COLUMN,:CLOB_COLUMN)",
+    "countQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : false,
+    "type" : "INSERT",
+    "parameters" : [ {
+      "name" : "PK_COLUMN",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "11",
+      "required" : true
+    }, {
+      "name" : "BYTE_COLUMN",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_ID",
+      "testValue" : "11",
+      "required" : true
+    }, {
+      "name" : "SHORT_COLUMN",
+      "type" : "short",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "12",
+      "required" : true
+    }, {
+      "name" : "INT_COLUMN",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_ID",
+      "testValue" : "90",
+      "required" : true
+    }, {
+      "name" : "FLOAT_COLUMN",
+      "type" : "float",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "90.90",
+      "required" : true
+    }, {
+      "name" : "DOUBLE_COLUMN",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "989.9089",
+      "required" : true
+    }, {
+      "name" : "BIGINT_COLUMN",
+      "type" : "big_integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "989",
+      "required" : true
+    }, {
+      "name" : "BIGDEC_COLUMN",
+      "type" : "big_decimal",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "9898.989",
+      "required" : true
+    }, {
+      "name" : "CHAR_COLUMN",
+      "type" : "character",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "k",
+      "required" : true
+    }, {
+      "name" : "STRING_COLUMN",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "hgghg",
+      "required" : true
+    }, {
+      "name" : "BOOLEAN_COLUMN",
+      "type" : "boolean",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : true,
+      "required" : true
+    }, {
+      "name" : "BOOLEAN_Y_N_COLUMN",
+      "type" : "character",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "N",
+      "required" : true
+    }, {
+      "name" : "DATETIME_COLUMN",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "DATE_TIME",
+      "testValue" : "2017-12-20T11:43:06",
+      "required" : true
+    }, {
+      "name" : "TIMESTAMP_COLUMN",
+      "type" : "timestamp",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : 1513750382000,
+      "required" : true
+    }, {
+      "name" : "BLOB_COLUMN",
+      "type" : "blob",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : { },
+      "required" : true
+    }, {
+      "name" : "TEXT_COLUMN",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "fhg",
+      "required" : true
+    }, {
+      "name" : "CLOB_COLUMN",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "gfhgfg",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : true,
+      "typeRef" : "com.testing20thdec_production.wmstudio.models.query.SvInsertQueryServerDefRequest",
+      "method" : "POST"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "java.lang.Integer",
+      "returns" : "ENTITY",
+      "responseType" : "SINGLE"
+    }
+  }
+}

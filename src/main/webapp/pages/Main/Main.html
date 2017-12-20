@@ -2,10 +2,26 @@
     <wm-header content="header" name="header" height="auto"></wm-header>
     <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
-        <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+        <wm-page-content columnwidth="12" name="mainContent" padding="unset 15px">
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1" title="Dept Data">
+                    <wm-table name="executeSV_DeptDataTable1" title="" dataset="bind:Variables.HrdbExecuteSV_DeptData.dataSet" navigation="Classic">
+                        <wm-table-column binding="deptId" caption="Dept Id" pcdisplay="true" mobiledisplay="true" type="long"></wm-table-column>
+                        <wm-table-column binding="deptCode" caption="Dept Code" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                        <wm-table-column binding="name" caption="Name" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                        <wm-table-column binding="budget" caption="Budget" pcdisplay="true" mobiledisplay="true" type="long"></wm-table-column>
+                        <wm-table-column binding="q1" caption="Q1" pcdisplay="true" mobiledisplay="true" type="long"></wm-table-column>
+                        <wm-table-column binding="q2" caption="Q2" pcdisplay="true" mobiledisplay="true" type="long"></wm-table-column>
+                        <wm-table-column binding="q3" caption="Q3" pcdisplay="true" mobiledisplay="true" type="long"></wm-table-column>
+                        <wm-table-column binding="q4" caption="Q4" pcdisplay="true" mobiledisplay="true" type="long"></wm-table-column>
+                        <wm-table-column binding="location" caption="Location" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                        <wm-table-column binding="tenantId" caption="Tenant Id" pcdisplay="true" mobiledisplay="true" type="long"></wm-table-column>
+                    </wm-table>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane2" title="List Emp Data"></wm-tabpane>
+                <wm-tabpane name="tabpane3"></wm-tabpane>
+            </wm-tabs>
         </wm-page-content>
-        <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
     <wm-footer name="footer" content="footer"></wm-footer>
 </wm-page>

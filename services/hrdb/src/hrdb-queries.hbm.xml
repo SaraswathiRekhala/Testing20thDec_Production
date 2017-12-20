@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="SV_DeptData">
+        <![CDATA[
+        select * from DEPARTMENT
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_DeptData__count">
+        <![CDATA[
+        select count(*) from (select * from DEPARTMENT) wmTempTable
+        ]]>
+    </sql-query>
+
+    <query name="HQL_ListVacationData">
+        <![CDATA[
+        select empId as EMPLOYEE_ID,startDate AS START_DATE,endDate AS END_DATE,status AS STATUS from Vacation where empId IN (:EMPID)
+        ]]>
+    <query-param name="EMPID" type="java.lang.Integer"/>
+    </query>
+
+    <query name="HQL_ListVacationData__count">
+        <![CDATA[
+        select count(*)  from Vacation where empId IN (:EMPID)
+        ]]>
+    <query-param name="EMPID" type="java.lang.Integer"/>
+    </query>
+
+    <sql-query name="SV_ListEmp">
+        <![CDATA[
+        select * from EMPLOYEE where DEPT_ID IN (:DEPTID)
+        ]]>
+    <query-param name="DEPTID" type="java.lang.Integer"/>
+    </sql-query>
+
+    <sql-query name="SV_ListEmp__count">
+        <![CDATA[
+        select count(*) from (select * from EMPLOYEE where DEPT_ID IN (:DEPTID)) wmTempTable
+        ]]>
+    <query-param name="DEPTID" type="java.lang.Integer"/>
+    </sql-query>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+{
+  "endpointAddress" : "https://api.fda.gov/drug/event.json",
+  "method" : "GET",
+  "headers" : { },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : {
+    "search" : "patient.drug.openfda.pharm_class_epc:\"nonsteroidal+anti-inflammatory+drug\"",
+    "count" : "patient.reaction.reactionmeddrapt.exact"
+  },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 200,
+    "headers" : {
+      "Access-Control-Allow-Headers" : [ "X-Requested-With" ],
+      "Access-Control-Allow-Origin" : [ "*" ],
+      "Age" : [ "761" ],
+      "Cache-Control" : [ "public, max-age=3600" ],
+      "Content-Security-Policy" : [ "default-src 'none'" ],
+      "Content-Type" : [ "application/json; charset=utf-8" ],
+      "Date" : [ "Wed, 20 Dec 2017 07:42:18 GMT" ],
+      "ETag" : [ "W/\"1b28-Ryu1g9UdZ1qu4gP5rVob3w\"" ],
+      "Server" : [ "openresty" ],
+      "Strict-Transport-Security" : [ "max-age=31536000;" ],
+      "Vary" : [ "Accept-Encoding", "Accept-Encoding", "Accept-Encoding" ],
+      "Via" : [ "http/1.1 api-umbrella (ApacheTrafficServer [cHs f ])" ],
+      "X-Cache" : [ "HIT" ],
+      "X-Content-Type-Options" : [ "nosniff" ],
+      "X-Frame-Options" : [ "deny" ],
+      "X-XSS-Protection" : [ "1; mode=block" ],
+      "Connection" : [ "keep-alive" ]
+    },
+    "responseBody" : "{\"meta\":{\"disclaimer\":\"Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.\",\"terms\":\"https://open.fda.gov/terms/\",\"license\":\"https://open.fda.gov/license/\",\"last_updated\":\"2017-12-19\"},\"results\":[{\"term\":\"DRUG INEFFECTIVE\",\"count\":33982},{\"term\":\"NAUSEA\",\"count\":28391},{\"term\":\"FATIGUE\",\"count\":24266},{\"term\":\"DYSPNOEA\",\"count\":23807},{\"term\":\"PAIN\",\"count\":23794},{\"term\":\"DIZZINESS\",\"count\":21766},{\"term\":\"HEADACHE\",\"count\":21538},{\"term\":\"DIARRHOEA\",\"count\":20223},{\"term\":\"MYOCARDIAL INFARCTION\",\"count\":19527},{\"term\":\"VOMITING\",\"count\":17435},{\"term\":\"ASTHENIA\",\"count\":15947},{\"term\":\"ARTHRALGIA\",\"count\":15733},{\"term\":\"FALL\",\"count\":14830},{\"term\":\"PAIN IN EXTREMITY\",\"count\":14258},{\"term\":\"MALAISE\",\"count\":14082},{\"term\":\"CEREBROVASCULAR ACCIDENT\",\"count\":13299},{\"term\":\"CHEST PAIN\",\"count\":12987},{\"term\":\"PRURITUS\",\"count\":12800},{\"term\":\"GASTROINTESTINAL HAEMORRHAGE\",\"count\":12168},{\"term\":\"RASH\",\"count\":11937},{\"term\":\"ANXIETY\",\"count\":11758},{\"term\":\"PNEUMONIA\",\"count\":11511},{\"term\":\"FLUSHING\",\"count\":11474},{\"term\":\"PYREXIA\",\"count\":11440},{\"term\":\"WEIGHT DECREASED\",\"count\":11276},{\"term\":\"BACK PAIN\",\"count\":11182},{\"term\":\"INSOMNIA\",\"count\":11087},{\"term\":\"DEPRESSION\",\"count\":10941},{\"term\":\"HYPERTENSION\",\"count\":10690},{\"term\":\"ANAEMIA\",\"count\":10599},{\"term\":\"ABDOMINAL PAIN\",\"count\":9472},{\"term\":\"COUGH\",\"count\":9434},{\"term\":\"HYPOTENSION\",\"count\":9296},{\"term\":\"DRUG HYPERSENSITIVITY\",\"count\":9171},{\"term\":\"FEELING ABNORMAL\",\"count\":9170},{\"term\":\"ABDOMINAL PAIN UPPER\",\"count\":9126},{\"term\":\"OEDEMA PERIPHERAL\",\"count\":9059},{\"term\":\"DEATH\",\"count\":8653},{\"term\":\"CONSTIPATION\",\"count\":8406},{\"term\":\"CARDIAC FAILURE CONGESTIVE\",\"count\":8315},{\"term\":\"PARAESTHESIA\",\"count\":8306},{\"term\":\"OFF LABEL USE\",\"count\":8296},{\"term\":\"CONDITION AGGRAVATED\",\"count\":7987},{\"term\":\"GAIT DISTURBANCE\",\"count\":7966},{\"term\":\"DRUG INTERACTION\",\"count\":7941},{\"term\":\"MYALGIA\",\"count\":7926},{\"term\":\"SOMNOLENCE\",\"count\":7769},{\"term\":\"MUSCLE SPASMS\",\"count\":7676},{\"term\":\"DECREASED APPETITE\",\"count\":7657},{\"term\":\"RENAL FAILURE ACUTE\",\"count\":7410},{\"term\":\"WEIGHT INCREASED\",\"count\":7357},{\"term\":\"CONFUSIONAL STATE\",\"count\":7251},{\"term\":\"BLOOD GLUCOSE INCREASED\",\"count\":7089},{\"term\":\"HYPOAESTHESIA\",\"count\":6995},{\"term\":\"DEHYDRATION\",\"count\":6828},{\"term\":\"URINARY TRACT INFECTION\",\"count\":6804},{\"term\":\"ERYTHEMA\",\"count\":6730},{\"term\":\"BLOOD PRESSURE INCREASED\",\"count\":6720},{\"term\":\"ATRIAL FIBRILLATION\",\"count\":6585},{\"term\":\"ABDOMINAL DISCOMFORT\",\"count\":6577},{\"term\":\"TREMOR\",\"count\":6361},{\"term\":\"HAEMOGLOBIN DECREASED\",\"count\":6272},{\"term\":\"RENAL FAILURE\",\"count\":6264},{\"term\":\"PULMONARY EMBOLISM\",\"count\":6256},{\"term\":\"HYPERHIDROSIS\",\"count\":6205},{\"term\":\"DRUG DOSE OMISSION\",\"count\":6045},{\"term\":\"INJECTION SITE PAIN\",\"count\":5818},{\"term\":\"LOSS OF CONSCIOUSNESS\",\"count\":5804},{\"term\":\"CORONARY ARTERY DISEASE\",\"count\":5737},{\"term\":\"HYPERSENSITIVITY\",\"count\":5664},{\"term\":\"URTICARIA\",\"count\":5538},{\"term\":\"VISION BLURRED\",\"count\":5528},{\"term\":\"DEEP VEIN THROMBOSIS\",\"count\":5516},{\"term\":\"DYSPEPSIA\",\"count\":5439},{\"term\":\"MUSCULAR WEAKNESS\",\"count\":5412},{\"term\":\"INJURY\",\"count\":5360},{\"term\":\"SYNCOPE\",\"count\":5348},{\"term\":\"CONTUSION\",\"count\":5201},{\"term\":\"PALPITATIONS\",\"count\":5049},{\"term\":\"NASOPHARYNGITIS\",\"count\":5047},{\"term\":\"HAEMORRHAGE\",\"count\":4909},{\"term\":\"OVERDOSE\",\"count\":4803},{\"term\":\"GASTROOESOPHAGEAL REFLUX DISEASE\",\"count\":4766},{\"term\":\"ARTHRITIS\",\"count\":4715},{\"term\":\"JOINT SWELLING\",\"count\":4655},{\"term\":\"CHEST DISCOMFORT\",\"count\":4507},{\"term\":\"CHILLS\",\"count\":4504},{\"term\":\"PRODUCT QUALITY ISSUE\",\"count\":4436},{\"term\":\"FEELING HOT\",\"count\":4436},{\"term\":\"EPISTAXIS\",\"count\":4423},{\"term\":\"PRODUCT USE ISSUE\",\"count\":4292},{\"term\":\"INCORRECT DOSE ADMINISTERED\",\"count\":4287},{\"term\":\"RHEUMATOID ARTHRITIS\",\"count\":4286},{\"term\":\"SINUSITIS\",\"count\":4283},{\"term\":\"MEMORY IMPAIRMENT\",\"count\":4257},{\"term\":\"ACUTE MYOCARDIAL INFARCTION\",\"count\":4252},{\"term\":\"SEPSIS\",\"count\":4184},{\"term\":\"HEART RATE INCREASED\",\"count\":4178},{\"term\":\"CARDIAC DISORDER\",\"count\":4111},{\"term\":\"DIABETES MELLITUS\",\"count\":4078}]}",
+    "convertedResponse" : null
+  },
+  "proxy" : null
+}
