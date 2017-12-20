@@ -47,4 +47,23 @@
     <query-param name="TEXT_COLUMN" type="java.lang.String"/>
     <query-param name="CLOB_COLUMN" type="java.lang.String"/>
     </sql-query>
+
+    <sql-query name="SV_AllTypesData">
+        <![CDATA[
+        select * from ALLTYPES_NEW_CHANGES
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_AllTypesData__count">
+        <![CDATA[
+        select count(*) from (select * from ALLTYPES_NEW_CHANGES) wmTempTable
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_AllTypesData__identifier">
+        <![CDATA[
+        select * from (select * from ALLTYPES_NEW_CHANGES) wmTempTable where "INT ID"=:intId
+        ]]>
+    <query-param name="intId" type="java.lang.Integer"/>
+    </sql-query>
 </hibernate-mapping>

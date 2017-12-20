@@ -1,0 +1,32 @@
+{
+  "FdaService" : {
+    "_id" : "wm-FdaService-wm.ServiceVariable-1513763863051",
+    "name" : "FdaService",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "search",
+      "value" : "patient.drug.openfda.pharm_class_epc:\"nonsteroidal+anti-inflammatory+drug\"",
+      "type" : "string"
+    }, {
+      "target" : "count",
+      "value" : "patient.reaction.reactionmeddrapt.exact",
+      "type" : "string"
+    } ],
+    "type" : "fdaService.RootResponse",
+    "service" : "fdaService",
+    "operation" : "invoke",
+    "operationId" : "fdaService_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  }
+}

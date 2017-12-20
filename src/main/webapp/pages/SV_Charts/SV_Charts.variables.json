@@ -1,0 +1,24 @@
+{
+  "SV_AllTypesData" : {
+    "_id" : "wm-SV_AllTypesData-wm.ServiceVariable-1513762772546",
+    "name" : "SV_AllTypesData",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.testing20thdec_production.wmstudio.models.query.SvAllTypesDataResponse",
+    "service" : "WMSTUDIO",
+    "operation" : "executeSV_AllTypesData",
+    "operationId" : "QueryExecutionController_executeSV_AllTypesData",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  }
+}

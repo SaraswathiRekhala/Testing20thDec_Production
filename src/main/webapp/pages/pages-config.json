@@ -3,6 +3,10 @@
   "type" : "PARTIAL",
   "params" : [ ]
 }, {
+  "name" : "LV_Charts",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Login",
   "type" : "PAGE",
   "params" : [ ]
@@ -12,6 +16,18 @@
   "params" : [ ]
 }, {
   "name" : "OracleTest",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Rest_Charts",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "SV_Charts",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "WebSocket_Charts",
   "type" : "PAGE",
   "params" : [ ]
 }, {

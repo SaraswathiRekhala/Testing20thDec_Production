@@ -1,0 +1,36 @@
+<wm-page data-ng-controller="Rest_ChartsPageController" pagetitle="Rest Charts" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-wizard stepstyle="justified" name="wizard1">
+                <wm-wizardstep name="wizardstep1" title="Line Chart">
+                    <wm-chart type="Line" title="Line Chart" height="250px" iconclass="wi wi-line-chart" name="chart1" dataset="bind:Variables.FdaService.dataSet.results" xaxisdatakey="term" yaxisdatakey="count"></wm-chart>
+                </wm-wizardstep>
+                <wm-wizardstep name="wizardstep2" title="Column Chart">
+                    <wm-chart type="Column" title="Column Chart" height="250px" iconclass="wi wi-bar-chart" name="chart2" dataset="bind:Variables.FdaService.dataSet.results" xaxisdatakey="term" yaxisdatakey="count"></wm-chart>
+                </wm-wizardstep>
+                <wm-wizardstep name="wizardstep3" title="Area Chart">
+                    <wm-chart type="Area" title="Area Chart" height="250px" iconclass="fa fa-area-chart" name="chart3" dataset="bind:Variables.FdaService.dataSet.results" xaxisdatakey="term" yaxisdatakey="count"></wm-chart>
+                </wm-wizardstep>
+                <wm-wizardstep name="wizardstep4" title="Pie Chart">
+                    <wm-chart type="Pie" title="Pie Chart" height="250px" iconclass="wi wi-pie-chart" name="chart4" dataset="bind:Variables.FdaService.dataSet.results" xaxisdatakey="term" yaxisdatakey="count" showlegend="hide" labeltype="key"></wm-chart>
+                </wm-wizardstep>
+                <wm-wizardstep name="wizardstep5" title="Bar Chart">
+                    <wm-chart type="Bar" title="Bar Chart" height="250px" iconclass="wi wi-bar-chart" name="chart5" dataset="bind:Variables.FdaService.dataSet.results" xaxisdatakey="term" yaxisdatakey="count"></wm-chart>
+                </wm-wizardstep>
+                <wm-wizardstep name="wizardstep6" title="Cumulative Line Chart">
+                    <wm-chart type="Cumulative Line" title="Cumulative Line Chart" height="250px" iconclass="wi wi-line-chart" name="chart6" dataset="bind:Variables.FdaService.dataSet.results" xaxisdatakey="term" yaxisdatakey="count"></wm-chart>
+                </wm-wizardstep>
+                <wm-wizardstep name="wizardstep7" title="Donut Chart">
+                    <wm-chart type="Donut" title="Donut Chart" height="250px" iconclass="wi wi-donut-large" name="chart7" dataset="bind:Variables.FdaService.dataSet.results" xaxisdatakey="term" yaxisdatakey="count" labeltype="key-value" showlegend="hide"></wm-chart>
+                </wm-wizardstep>
+                <wm-wizardstep name="wizardstep8" title="Bubble Chart">
+                    <wm-chart type="Bubble" title="Bubble Chart" height="250px" iconclass="wi wi-bubble-chart" name="chart8" dataset="bind:Variables.FdaService.dataSet.results" xaxisdatakey="term" yaxisdatakey="count"></wm-chart>
+                </wm-wizardstep>
+            </wm-wizard>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

@@ -15,6 +15,17 @@
     } ],
     "operation" : "toast"
   },
+  "goToPage_LV_Charts" : {
+    "_id" : "wm-goToPage_LV_Charts-wm.NavigationVariable-1513762323799",
+    "name" : "goToPage_LV_Charts",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "LV_Charts",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
@@ -31,6 +42,39 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "OracleTest",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Rest_Charts" : {
+    "_id" : "wm-goToPage_Rest_Charts-wm.NavigationVariable-1513762215222",
+    "name" : "goToPage_Rest_Charts",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Rest_Charts",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_SV_Charts" : {
+    "_id" : "wm-goToPage_SV_Charts-wm.NavigationVariable-1513762488380",
+    "name" : "goToPage_SV_Charts",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "SV_Charts",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_WebSocket_Charts" : {
+    "_id" : "wm-goToPage_Rest_Charts-wm.NavigationVariable-1513761565517",
+    "name" : "goToPage_WebSocket_Charts",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "WebSocket_Charts",
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },

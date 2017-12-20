@@ -2,7 +2,8 @@
     <wm-header content="header" name="header" height="auto"></wm-header>
     <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
-        <wm-page-content columnwidth="12" name="mainContent" padding="unset 15px">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="mainContent" padding="unset 15px">
             <wm-tabs name="tabs1">
                 <wm-tabpane name="tabpane1" title="Dept Data">
                     <wm-table name="executeSV_DeptDataTable1" title="" dataset="bind:Variables.HrdbExecuteSV_DeptData.dataSet" navigation="Classic">
@@ -18,8 +19,64 @@
                         <wm-table-column binding="tenantId" caption="Tenant Id" pcdisplay="true" mobiledisplay="true" type="long"></wm-table-column>
                     </wm-table>
                 </wm-tabpane>
-                <wm-tabpane name="tabpane2" title="List Emp Data"></wm-tabpane>
-                <wm-tabpane name="tabpane3"></wm-tabpane>
+                <wm-tabpane name="tabpane2" title="List Emp Data">
+                    <wm-composite name="composite1">
+                        <wm-label class="col-md-3 control-label" name="label1" caption="DeptId"></wm-label>
+                        <wm-container class="col-md-9" name="container1">
+                            <wm-checkboxset height="auto" name="checkboxset1" dataset="bind:Variables.HrdbExecuteSV_DeptData.dataSet" datafield="deptId" displayexpression="bind:$[deptId]+' '+$[deptCode]"></wm-checkboxset>
+                        </wm-container>
+                    </wm-composite>
+                    <wm-table name="executeSV_ListEmpTable1" title="" dataset="bind:Variables.HrdbExecuteSV_ListEmp.dataSet" navigation="Pager" exportformat="EXCEL,CSV">
+                        <wm-table-column binding="zip" caption="Zip" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="empId" caption="Emp Id" edit-widget-type="number" type="long" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="firstname" caption="Firstname" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="birthdate" caption="Birthdate" edit-widget-type="date" type="date" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="role" caption="Role" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="city" caption="City" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="jobTitle" caption="Job Title" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="deptId" caption="Dept Id" edit-widget-type="number" type="long" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="managerId" caption="Manager Id" edit-widget-type="number" type="long" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="lastname" caption="Lastname" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="picurl" caption="Picurl" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="password" caption="Password" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="street" caption="Street" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="tenantId" caption="Tenant Id" edit-widget-type="number" type="long" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="state" caption="State" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="username" caption="Username" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                    </wm-table>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane3">
+                    <wm-composite name="composite2">
+                        <wm-label class="col-md-3 control-label" name="label2" caption="Select DeptId"></wm-label>
+                        <wm-container class="col-md-9" name="container2">
+                            <wm-select name="select1" multiple="true" dataset="bind:Variables.HrdbExecuteSV_DeptData.dataSet" datafield="deptId" displayexpression="bind:$[deptId]+' '+$[name]"></wm-select>
+                        </wm-container>
+                    </wm-composite>
+                    <wm-list listclass="list-group" template="true" itemsperrow="xs-1 sm-2 md-3 lg-4" class="list-card" name="executeSV_ListEmpList1" dataset="bind:Variables.HrdbExecuteSV_ListEmp1.dataSet" navigation="On-Demand" groupby="firstname">
+                        <wm-listtemplate layout="media" name="listtemplate1">
+                            <wm-card name="card1">
+                                <wm-card-content fontsize="0.8" fontunit="em" name="card_content1">
+                                    <wm-layoutgrid columns="2" name="layoutgrid1">
+                                        <wm-gridrow name="gridrow1">
+                                            <wm-gridcolumn colwidth="6" columnwidth="6" class="col-xs-6" name="gridcolumn1">
+                                                <wm-picture name="Picture" width="100%" picturesource="bind:Variables.HrdbExecuteSV_ListEmp1.dataSet.picurl"></wm-picture>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn colwidth="6" columnwidth="6" padding="unset 1.25em" class="col-xs-6" name="gridcolumn2">
+                                                <wm-label name="ID" caption="bind:Variables.HrdbExecuteSV_ListEmp1.dataSet.deptId" class="text-muted p" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                                                <wm-label name="Name" caption="bind:Variables.HrdbExecuteSV_ListEmp1.dataSet.empId" class="h4" margin="0px unset" whitespace="nowrap"></wm-label>
+                                                <wm-label name="JobTitle" caption="bind:Variables.HrdbExecuteSV_ListEmp1.dataSet.firstname" class="h5" margin="0px unset unset unset" whitespace="nowrap"></wm-label>
+                                                <wm-label name="Department" caption="bind:Variables.HrdbExecuteSV_ListEmp1.dataSet.managerId" class="p text-muted" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                                                <wm-label name="Location" caption="bind:Variables.HrdbExecuteSV_ListEmp1.dataSet.street" class="text-muted p" whitespace="nowrap"></wm-label>
+                                                <wm-anchor name="PhoneNumber" caption="bind:Variables.HrdbExecuteSV_ListEmp1.dataSet.birthdate" class="h5" hyperlink="tel:" margin="0px unset" whitespace="nowrap"></wm-anchor>
+                                                <wm-anchor name="EmailID" class="p text-muted" hyperlink="mailto://" caption="bind:Variables.HrdbExecuteSV_ListEmp1.dataSet.city" whitespace="nowrap"></wm-anchor>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-card-content>
+                            </wm-card>
+                        </wm-listtemplate>
+                    </wm-list>
+                </wm-tabpane>
             </wm-tabs>
         </wm-page-content>
     </wm-content>
