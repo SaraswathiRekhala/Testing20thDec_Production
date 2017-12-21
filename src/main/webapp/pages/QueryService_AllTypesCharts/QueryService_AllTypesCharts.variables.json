@@ -1,0 +1,168 @@
+{
+  "navigateToAcc1" : {
+    "_id" : "wm-navigateToAcc1-wm.NavigationVariable-1513832207832",
+    "name" : "navigateToAcc1",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "QueryService_AllTypesCharts",
+      "type" : "string"
+    }, {
+      "target" : "accordionName",
+      "value" : "accordionpane1",
+      "type" : "string"
+    } ],
+    "operation" : "gotoAccordion",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "navigateToAcc2" : {
+    "_id" : "wm-navigateToAcc2-wm.NavigationVariable-1513832044465",
+    "name" : "navigateToAcc2",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "QueryService_AllTypesCharts",
+      "type" : "string"
+    }, {
+      "target" : "accordionName",
+      "value" : "accordionpane2",
+      "type" : "string"
+    } ],
+    "operation" : "gotoAccordion",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "navigateToAcc3" : {
+    "_id" : "wm-navigateToAcc3-wm.NavigationVariable-1513832072776",
+    "name" : "navigateToAcc3",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "QueryService_AllTypesCharts",
+      "type" : "string"
+    }, {
+      "target" : "accordionName",
+      "value" : "accordionpane3",
+      "type" : "string"
+    } ],
+    "operation" : "gotoAccordion",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "navigateToAcc4" : {
+    "_id" : "wm-navigateToAcc4-wm.NavigationVariable-1513832099976",
+    "name" : "navigateToAcc4",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "QueryService_AllTypesCharts",
+      "type" : "string"
+    }, {
+      "target" : "accordionName",
+      "value" : "accordionpane4",
+      "type" : "string"
+    } ],
+    "operation" : "gotoAccordion",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "navigateToAcc5" : {
+    "_id" : "wm-navigateToAcc5-wm.NavigationVariable-1513832124520",
+    "name" : "navigateToAcc5",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "QueryService_AllTypesCharts",
+      "type" : "string"
+    }, {
+      "target" : "accordionName",
+      "value" : "accordionpane5",
+      "type" : "string"
+    } ],
+    "operation" : "gotoAccordion",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "navigateToAcc6" : {
+    "_id" : "wm-navigateToAcc6-wm.NavigationVariable-1513832151272",
+    "name" : "navigateToAcc6",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "QueryService_AllTypesCharts",
+      "type" : "string"
+    }, {
+      "target" : "accordionName",
+      "value" : "accordionpane6",
+      "type" : "string"
+    } ],
+    "operation" : "gotoAccordion",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "navigateToAcc7" : {
+    "_id" : "wm-navigateToAcc7-wm.NavigationVariable-1513832169145",
+    "name" : "navigateToAcc7",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "QueryService_AllTypesCharts",
+      "type" : "string"
+    }, {
+      "target" : "accordionName",
+      "value" : "accordionpane7",
+      "type" : "string"
+    } ],
+    "operation" : "gotoAccordion",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "navigateToAcc8" : {
+    "_id" : "wm-navigateToAcc8-wm.NavigationVariable-1513832188856",
+    "name" : "navigateToAcc8",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "QueryService_AllTypesCharts",
+      "type" : "string"
+    }, {
+      "target" : "accordionName",
+      "value" : "accordionpane8",
+      "type" : "string"
+    } ],
+    "operation" : "gotoAccordion",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "SV_AllTypesData" : {
+    "_id" : "wm-SV_AllTypesData-wm.ServiceVariable-1513762772546",
+    "name" : "SV_AllTypesData",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.testing20thdec_production.wmstudio.models.query.SvAllTypesDataResponse",
+    "service" : "WMSTUDIO",
+    "operation" : "executeSV_AllTypesData",
+    "operationId" : "QueryExecutionController_executeSV_AllTypesData",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  }
+}

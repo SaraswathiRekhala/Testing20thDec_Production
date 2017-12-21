@@ -82,6 +82,8 @@
         <security:intercept-url pattern="/j_spring_security_check" access="permitAll"/>
         <security:intercept-url pattern="/j_spring_security_logout" access="permitAll"/>
         <security:intercept-url pattern="/pages/Login/**" access="permitAll"/>
+        <security:intercept-url pattern="/pages/QueryService_AllTypesCharts/**" access="isAuthenticated()"/>
+        <security:intercept-url pattern="/pages/WebSocket_Chart/**" access="permitAll"/>
         <security:intercept-url pattern="/services/application/i18n/**" access="permitAll"/>
         <security:intercept-url pattern="/services/prefabs/**/servicedefs" access="permitAll"/>
         <security:intercept-url pattern="/services/security/**" access="permitAll"/>
@@ -248,7 +250,7 @@
             <value>ROLE_</value>
         </property>
         <property name="authoritiesByUsernameQuery">
-            <value>SELECT userId, role FROM UserTable WHERE userName = ?</value>
+            <value>SELECT role FROM UserTable WHERE userName = :LOGGED_IN_USERNAME</value>
         </property>
         <property name="rolesByQuery" value="true"/>
         <property name="hibernateTemplate">

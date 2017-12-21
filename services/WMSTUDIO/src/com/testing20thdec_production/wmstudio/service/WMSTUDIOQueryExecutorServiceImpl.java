@@ -39,6 +39,46 @@ public class WMSTUDIOQueryExecutorServiceImpl implements WMSTUDIOQueryExecutorSe
 
     @Transactional(value = "WMSTUDIOTransactionManager")
     @Override
+    public Integer executeSV_InsertQuery_ServerDef(SvInsertQueryServerDefRequest svInsertQueryServerDefRequest) {
+        Map params = new HashMap(13);
+
+        params.put("PK_COLUMN", svInsertQueryServerDefRequest.getPkColumn());
+        params.put("SHORT_COLUMN", svInsertQueryServerDefRequest.getShortColumn());
+        params.put("FLOAT_COLUMN", svInsertQueryServerDefRequest.getFloatColumn());
+        params.put("DOUBLE_COLUMN", svInsertQueryServerDefRequest.getDoubleColumn());
+        params.put("BIGINT_COLUMN", svInsertQueryServerDefRequest.getBigintColumn());
+        params.put("BIGDEC_COLUMN", svInsertQueryServerDefRequest.getBigdecColumn());
+        params.put("CHAR_COLUMN", svInsertQueryServerDefRequest.getCharColumn());
+        params.put("BOOLEAN_COLUMN", svInsertQueryServerDefRequest.getBooleanColumn());
+        params.put("BOOLEAN_Y_N_COLUMN", svInsertQueryServerDefRequest.getBooleanYNColumn());
+        params.put("TIMESTAMP_COLUMN", svInsertQueryServerDefRequest.getTimestampColumn());
+        params.put("BLOB_COLUMN", svInsertQueryServerDefRequest.getBlobColumn());
+        params.put("TEXT_COLUMN", svInsertQueryServerDefRequest.getTextColumn());
+        params.put("CLOB_COLUMN", svInsertQueryServerDefRequest.getClobColumn());
+
+        return queryExecutor.executeNamedQueryForUpdate("SV_InsertQuery_ServerDef", params);
+    }
+
+    @Transactional(readOnly = true, value = "WMSTUDIOTransactionManager")
+    @Override
+    public Page<SvCustomQueryResponse> executeSV_CustomQuery(Pageable pageable) {
+        Map params = new HashMap(0);
+
+
+        return queryExecutor.executeNamedQuery("SV_CustomQuery", params, SvCustomQueryResponse.class, pageable);
+    }
+
+    @Transactional(readOnly = true, value = "WMSTUDIOTransactionManager")
+    @Override
+    public Downloadable exportSV_CustomQuery(ExportType exportType, Pageable pageable) {
+        Map params = new HashMap(0);
+
+
+        return queryExecutor.exportNamedQueryData("SV_CustomQuery", params, exportType, SvCustomQueryResponse.class, pageable);
+    }
+
+    @Transactional(value = "WMSTUDIOTransactionManager")
+    @Override
     public Integer executeSV_InsertQuery(SvInsertQueryRequest svInsertQueryRequest) {
         Map params = new HashMap(17);
 
@@ -61,28 +101,6 @@ public class WMSTUDIOQueryExecutorServiceImpl implements WMSTUDIOQueryExecutorSe
         params.put("CLOB_COLUMN", svInsertQueryRequest.getClobColumn());
 
         return queryExecutor.executeNamedQueryForUpdate("SV_InsertQuery", params);
-    }
-
-    @Transactional(value = "WMSTUDIOTransactionManager")
-    @Override
-    public Integer executeSV_InsertQuery_ServerDef(SvInsertQueryServerDefRequest svInsertQueryServerDefRequest) {
-        Map params = new HashMap(13);
-
-        params.put("PK_COLUMN", svInsertQueryServerDefRequest.getPkColumn());
-        params.put("SHORT_COLUMN", svInsertQueryServerDefRequest.getShortColumn());
-        params.put("FLOAT_COLUMN", svInsertQueryServerDefRequest.getFloatColumn());
-        params.put("DOUBLE_COLUMN", svInsertQueryServerDefRequest.getDoubleColumn());
-        params.put("BIGINT_COLUMN", svInsertQueryServerDefRequest.getBigintColumn());
-        params.put("BIGDEC_COLUMN", svInsertQueryServerDefRequest.getBigdecColumn());
-        params.put("CHAR_COLUMN", svInsertQueryServerDefRequest.getCharColumn());
-        params.put("BOOLEAN_COLUMN", svInsertQueryServerDefRequest.getBooleanColumn());
-        params.put("BOOLEAN_Y_N_COLUMN", svInsertQueryServerDefRequest.getBooleanYNColumn());
-        params.put("TIMESTAMP_COLUMN", svInsertQueryServerDefRequest.getTimestampColumn());
-        params.put("BLOB_COLUMN", svInsertQueryServerDefRequest.getBlobColumn());
-        params.put("TEXT_COLUMN", svInsertQueryServerDefRequest.getTextColumn());
-        params.put("CLOB_COLUMN", svInsertQueryServerDefRequest.getClobColumn());
-
-        return queryExecutor.executeNamedQueryForUpdate("SV_InsertQuery_ServerDef", params);
     }
 
     @Transactional(readOnly = true, value = "WMSTUDIOTransactionManager")

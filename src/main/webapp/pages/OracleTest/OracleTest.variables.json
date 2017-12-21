@@ -1,4 +1,22 @@
 {
+  "navigateToCursor" : {
+    "_id" : "wm-navigateToCursor-wm.NavigationVariable-1513766581962",
+    "name" : "navigateToCursor",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "OracleTest",
+      "type" : "string"
+    }, {
+      "target" : "tabName",
+      "value" : "tabpane6",
+      "type" : "string"
+    } ],
+    "operation" : "gotoTab",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "WMSTUDIOAlltypesNewChangesData" : {
     "_id" : "wm-WMSTUDIOAlltypesNewChangesData-wm.LiveVariable-1513750852559",
     "name" : "WMSTUDIOAlltypesNewChangesData",
@@ -249,6 +267,52 @@
     "properties" : [ ],
     "relatedTables" : [ ],
     "package" : "com.testing20thdec_production.wmstudio.AlltypesNewChanges"
+  },
+  "WMSTUDIOExecuteProcedure_2Cursors" : {
+    "_id" : "wm-WMSTUDIOExecuteProcedure_2Cursors-wm.ServiceVariable-1513766465525",
+    "name" : "WMSTUDIOExecuteProcedure_2Cursors",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.testing20thdec_production.wmstudio.models.procedure.Procedure2cursorsResponse",
+    "service" : "WMSTUDIO",
+    "operation" : "executeProcedure_2Cursors",
+    "operationId" : "ProcedureExecutionController_executeProcedure_2Cursors",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "ProcedureExecution"
+  },
+  "WMSTUDIOExecuteSV_CustomQuery" : {
+    "_id" : "wm-WMSTUDIOExecuteSV_CustomQuery-wm.ServiceVariable-1513769489598",
+    "name" : "WMSTUDIOExecuteSV_CustomQuery",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.testing20thdec_production.wmstudio.models.query.SvCustomQueryResponse",
+    "service" : "WMSTUDIO",
+    "operation" : "executeSV_CustomQuery",
+    "operationId" : "QueryExecutionController_executeSV_CustomQuery",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "QueryExecution"
   },
   "WMSTUDIOExecuteSV_InsertQuery" : {
     "_id" : "wm-WMSTUDIOExecuteSV_InsertQuery-wm.ServiceVariable-1513750597751",

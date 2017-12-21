@@ -1,0 +1,210 @@
+{
+  "SV_BiTemporal" : {
+    "name" : "SV_BiTemporal",
+    "description" : "Bi Temporal",
+    "version" : "V2",
+    "queryString" : "SELECT id, vin, annual_mileage, rental_car, coverage_amt, \n       bus_start, bus_end, sys_start, sys_end,SQL_OPERATION   \nFROM POLICY_BITEMPORAL FOR SYSTEM_TIME FROM '2017-12-20' TO '9999-07-11'\nWHERE ID = 1111",
+    "countQueryString" : "select count(*) from (SELECT id, vin, annual_mileage, rental_car, coverage_amt, \n       bus_start, bus_end, sys_start, sys_end,SQL_OPERATION   \nFROM POLICY_BITEMPORAL FOR SYSTEM_TIME FROM '2017-12-20' TO '9999-07-11'\nWHERE ID = 1111) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.testing20thdec_production.schooldb.models.query.SvBiTemporalResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "ID",
+        "fieldName" : "id",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      }, {
+        "name" : "VIN",
+        "fieldName" : "vin",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "ANNUAL_MILEAGE",
+        "fieldName" : "annualMileage",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      }, {
+        "name" : "RENTAL_CAR",
+        "fieldName" : "rentalCar",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "COVERAGE_AMT",
+        "fieldName" : "coverageAmt",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      }, {
+        "name" : "BUS_START",
+        "fieldName" : "busStart",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.sql.Date",
+          "list" : false
+        }
+      }, {
+        "name" : "BUS_END",
+        "fieldName" : "busEnd",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.sql.Date",
+          "list" : false
+        }
+      }, {
+        "name" : "SYS_START",
+        "fieldName" : "sysStart",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.sql.Timestamp",
+          "list" : false
+        }
+      }, {
+        "name" : "SYS_END",
+        "fieldName" : "sysEnd",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.sql.Timestamp",
+          "list" : false
+        }
+      }, {
+        "name" : "SQL_OPERATION",
+        "fieldName" : "sqlOperation",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "SV_SystemTemporal" : {
+    "name" : "SV_SystemTemporal",
+    "description" : "System Temporal",
+    "version" : "V2",
+    "queryString" : "select ID,SYS_START,SYS_END,VIN,COVERAGE_AMT,RENTAL_CAR,ANNUAL_MILEAGE,SQL_OPERATION from POLICY",
+    "countQueryString" : "select count(*) from (select ID,SYS_START,SYS_END,VIN,COVERAGE_AMT,RENTAL_CAR,ANNUAL_MILEAGE,SQL_OPERATION from POLICY) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.testing20thdec_production.schooldb.models.query.SvSystemTemporalResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "ID",
+        "fieldName" : "id",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      }, {
+        "name" : "SYS_START",
+        "fieldName" : "sysStart",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.sql.Timestamp",
+          "list" : false
+        }
+      }, {
+        "name" : "SYS_END",
+        "fieldName" : "sysEnd",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.sql.Timestamp",
+          "list" : false
+        }
+      }, {
+        "name" : "VIN",
+        "fieldName" : "vin",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "COVERAGE_AMT",
+        "fieldName" : "coverageAmt",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      }, {
+        "name" : "RENTAL_CAR",
+        "fieldName" : "rentalCar",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "ANNUAL_MILEAGE",
+        "fieldName" : "annualMileage",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      }, {
+        "name" : "SQL_OPERATION",
+        "fieldName" : "sqlOperation",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  }
+}

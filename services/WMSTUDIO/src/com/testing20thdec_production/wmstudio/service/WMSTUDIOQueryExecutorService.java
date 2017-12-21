@@ -19,9 +19,13 @@ import com.testing20thdec_production.wmstudio.models.query.*;
 
 public interface WMSTUDIOQueryExecutorService {
 
-    Integer executeSV_InsertQuery(SvInsertQueryRequest svInsertQueryRequest);
-
     Integer executeSV_InsertQuery_ServerDef(SvInsertQueryServerDefRequest svInsertQueryServerDefRequest);
+
+    Page<SvCustomQueryResponse> executeSV_CustomQuery(Pageable pageable);
+
+    Downloadable exportSV_CustomQuery(ExportType exportType, Pageable pageable);
+
+    Integer executeSV_InsertQuery(SvInsertQueryRequest svInsertQueryRequest);
 
     Page<SvAllTypesDataResponse> executeSV_AllTypesData(Pageable pageable);
 

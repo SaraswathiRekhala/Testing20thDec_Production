@@ -3,6 +3,10 @@
   "type" : "PARTIAL",
   "params" : [ ]
 }, {
+  "name" : "DB2Temporal",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "LV_Charts",
   "type" : "PAGE",
   "params" : [ ]
@@ -19,15 +23,15 @@
   "type" : "PAGE",
   "params" : [ ]
 }, {
+  "name" : "QueryService_AllTypesCharts",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "Rest_Charts",
   "type" : "PAGE",
   "params" : [ ]
 }, {
-  "name" : "SV_Charts",
-  "type" : "PAGE",
-  "params" : [ ]
-}, {
-  "name" : "WebSocket_Charts",
+  "name" : "WebSocket_Chart",
   "type" : "PAGE",
   "params" : [ ]
 }, {

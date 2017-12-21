@@ -33,7 +33,6 @@ import com.wordnik.swagger.annotations.ApiOperation;
 import com.wordnik.swagger.annotations.ApiParam;
 
 import com.testing20thdec_production.hrdb.Department;
-import com.testing20thdec_production.hrdb.Employee;
 import com.testing20thdec_production.hrdb.service.DepartmentService;
 
 
@@ -159,14 +158,6 @@ public class DepartmentController {
         return departmentService.getAggregatedValues(aggregationInfo, pageable);
     }
 
-    @RequestMapping(value="/{id:.+}/employees", method=RequestMethod.GET)
-    @ApiOperation(value = "Gets the employees instance associated with the given id.")
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    public Page<Employee> findAssociatedEmployees(@PathVariable("id") Integer id, Pageable pageable) {
-
-        LOGGER.debug("Fetching all associated employees");
-        return departmentService.findAssociatedEmployees(id, pageable);
-    }
 
     /**
 	 * This setter method should only be used by unit tests

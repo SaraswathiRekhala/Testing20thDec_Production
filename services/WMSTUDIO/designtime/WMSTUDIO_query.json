@@ -175,6 +175,65 @@
       } ]
     }
   },
+  "SV_CustomQuery" : {
+    "name" : "SV_CustomQuery",
+    "description" : "Custom Query",
+    "version" : "V2",
+    "queryString" : "select \"INT COL\",\"INT ID\",\"CHAR COL\",\"STRING COL\" from ALLTYPES_NEW_CHANGES",
+    "countQueryString" : "select count(*) from (select \"INT COL\",\"INT ID\",\"CHAR COL\",\"STRING COL\" from ALLTYPES_NEW_CHANGES) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.testing20thdec_production.wmstudio.models.query.SvCustomQueryResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "INT COL",
+        "fieldName" : "intCol",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      }, {
+        "name" : "INT ID",
+        "fieldName" : "intId",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      }, {
+        "name" : "CHAR COL",
+        "fieldName" : "charCol",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "STRING COL",
+        "fieldName" : "stringCol",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
   "SV_InsertQuery" : {
     "name" : "SV_InsertQuery",
     "description" : "Insert Query",

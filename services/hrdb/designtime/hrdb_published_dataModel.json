@@ -299,15 +299,15 @@
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
-        "defaultValue" : null,
+        "defaultValue" : "",
         "type" : "user-defined"
       },
-      "constraintList" : null,
+      "constraintList" : [ ],
       "fieldName" : "deptId",
       "foreignKey" : true,
       "generatorType" : "assigned",
       "generatorValue" : null,
-      "hidden" : false,
+      "hidden" : true,
       "javaType" : "integer",
       "length" : 255,
       "name" : "DEPT_ID",

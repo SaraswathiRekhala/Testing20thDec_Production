@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="SV_SystemTemporal">
+        <![CDATA[
+        select ID,SYS_START,SYS_END,VIN,COVERAGE_AMT,RENTAL_CAR,ANNUAL_MILEAGE,SQL_OPERATION from POLICY
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_SystemTemporal__count">
+        <![CDATA[
+        select count(*) from (select ID,SYS_START,SYS_END,VIN,COVERAGE_AMT,RENTAL_CAR,ANNUAL_MILEAGE,SQL_OPERATION from POLICY) wmTempTable
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_BiTemporal">
+        <![CDATA[
+        SELECT id, vin, annual_mileage, rental_car, coverage_amt, 
+       bus_start, bus_end, sys_start, sys_end,SQL_OPERATION   
+FROM POLICY_BITEMPORAL FOR SYSTEM_TIME FROM '2017-12-20' TO '9999-07-11'
+WHERE ID = 1111
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_BiTemporal__count">
+        <![CDATA[
+        select count(*) from (SELECT id, vin, annual_mileage, rental_car, coverage_amt, 
+       bus_start, bus_end, sys_start, sys_end,SQL_OPERATION   
+FROM POLICY_BITEMPORAL FOR SYSTEM_TIME FROM '2017-12-20' TO '9999-07-11'
+WHERE ID = 1111) wmTempTable
+        ]]>
+    </sql-query>
+</hibernate-mapping>

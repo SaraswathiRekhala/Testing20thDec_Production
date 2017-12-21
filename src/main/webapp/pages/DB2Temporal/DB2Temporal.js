@@ -1,4 +1,4 @@
-Application.$controller("WebSocket_ChartsPageController", ["$scope", function ($scope) {
+Application.$controller("DB2TemporalPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -15,3 +15,27 @@ Application.$controller("WebSocket_ChartsPageController", ["$scope", function ($
     };
 
 }]);
+
+
+
+
+Application.$controller("PolicyTable1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("executeSV_SystemTemporalTable1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("executeSV_BiTemporalTable1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);

@@ -2925,10 +2925,10 @@
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
+        "type" : "server-defined",
+        "name" : "USER_NAME"
       },
-      "constraintList" : null,
+      "constraintList" : [ ],
       "fieldName" : "charCol",
       "foreignKey" : false,
       "generatorType" : "assigned",

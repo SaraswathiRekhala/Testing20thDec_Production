@@ -15,6 +15,17 @@
     } ],
     "operation" : "toast"
   },
+  "goToPage_DB2Temporal" : {
+    "_id" : "wm-goToPage_DB2Temporal-wm.NavigationVariable-1513769277689",
+    "name" : "goToPage_DB2Temporal",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "DB2Temporal",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_LV_Charts" : {
     "_id" : "wm-goToPage_LV_Charts-wm.NavigationVariable-1513762323799",
     "name" : "goToPage_LV_Charts",
@@ -45,6 +56,17 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_QueryService_AllTypesCharts" : {
+    "_id" : "wm-goToPage_SV_Charts-wm.NavigationVariable-1513762488380",
+    "name" : "goToPage_QueryService_AllTypesCharts",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "QueryService_AllTypesCharts",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Rest_Charts" : {
     "_id" : "wm-goToPage_Rest_Charts-wm.NavigationVariable-1513762215222",
     "name" : "goToPage_Rest_Charts",
@@ -56,25 +78,14 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
-  "goToPage_SV_Charts" : {
-    "_id" : "wm-goToPage_SV_Charts-wm.NavigationVariable-1513762488380",
-    "name" : "goToPage_SV_Charts",
-    "owner" : "App",
-    "category" : "wm.NavigationVariable",
-    "dataBinding" : [ ],
-    "operation" : "gotoPage",
-    "pageName" : "SV_Charts",
-    "dataSet" : [ ],
-    "pageTransitions" : "none"
-  },
-  "goToPage_WebSocket_Charts" : {
+  "goToPage_WebSocket_Chart" : {
     "_id" : "wm-goToPage_Rest_Charts-wm.NavigationVariable-1513761565517",
-    "name" : "goToPage_WebSocket_Charts",
+    "name" : "goToPage_WebSocket_Chart",
     "owner" : "App",
     "category" : "wm.NavigationVariable",
     "dataBinding" : [ ],
     "operation" : "gotoPage",
-    "pageName" : "WebSocket_Charts",
+    "pageName" : "WebSocket_Chart",
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },

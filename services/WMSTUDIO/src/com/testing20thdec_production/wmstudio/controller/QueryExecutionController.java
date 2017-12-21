@@ -60,17 +60,6 @@ public class QueryExecutionController {
     @Autowired
     private WMSTUDIOQueryExecutorService queryService;
 
-    @RequestMapping(value = "/queries/SV_InsertQuery", method = RequestMethod.POST)
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    @ApiOperation(value = "Insert Query")
-    public IntegerWrapper executeSV_InsertQuery(@Valid @RequestPart("wm_data_json") SvInsertQueryRequest svInsertQueryRequest, @RequestPart(value = "BLOB_COLUMN") MultipartFile blobColumn, HttpServletRequest _request) {
-        LOGGER.debug("Executing named query: SV_InsertQuery");
-        svInsertQueryRequest.setBlobColumn(WMMultipartUtils.toByteArray(blobColumn));
-        Integer _result = queryService.executeSV_InsertQuery(svInsertQueryRequest);
-        LOGGER.debug("got the result for named query: SV_InsertQuery, result:{}", _result);
-        return new IntegerWrapper(_result);
-    }
-
     @RequestMapping(value = "/queries/SV_InsertQuery_ServerDef", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     @ApiOperation(value = "SV_InsertQuery_ServerDef")
@@ -79,6 +68,36 @@ public class QueryExecutionController {
         svInsertQueryServerDefRequest.setBlobColumn(WMMultipartUtils.toByteArray(blobColumn));
         Integer _result = queryService.executeSV_InsertQuery_ServerDef(svInsertQueryServerDefRequest);
         LOGGER.debug("got the result for named query: SV_InsertQuery_ServerDef, result:{}", _result);
+        return new IntegerWrapper(_result);
+    }
+
+    @RequestMapping(value = "/queries/SV_CustomQuery", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Custom Query")
+    public Page<SvCustomQueryResponse> executeSV_CustomQuery(Pageable pageable, HttpServletRequest _request) {
+        LOGGER.debug("Executing named query: SV_CustomQuery");
+        Page<SvCustomQueryResponse> _result = queryService.executeSV_CustomQuery(pageable);
+        LOGGER.debug("got the result for named query: SV_CustomQuery, result:{}", _result);
+        return _result;
+    }
+
+    @ApiOperation(value = "Returns downloadable file for query SV_CustomQuery")
+    @RequestMapping(value = "/queries/SV_CustomQuery/export/{exportType}", method = RequestMethod.GET, produces = "application/octet-stream")
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Downloadable exportSV_CustomQuery(@PathVariable("exportType") ExportType exportType, Pageable pageable, HttpServletRequest _request) {
+        LOGGER.debug("Exporting named query: SV_CustomQuery");
+
+        return queryService.exportSV_CustomQuery(exportType, pageable);
+    }
+
+    @RequestMapping(value = "/queries/SV_InsertQuery", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "Insert Query")
+    public IntegerWrapper executeSV_InsertQuery(@Valid @RequestPart("wm_data_json") SvInsertQueryRequest svInsertQueryRequest, @RequestPart(value = "BLOB_COLUMN") MultipartFile blobColumn, HttpServletRequest _request) {
+        LOGGER.debug("Executing named query: SV_InsertQuery");
+        svInsertQueryRequest.setBlobColumn(WMMultipartUtils.toByteArray(blobColumn));
+        Integer _result = queryService.executeSV_InsertQuery(svInsertQueryRequest);
+        LOGGER.debug("got the result for named query: SV_InsertQuery, result:{}", _result);
         return new IntegerWrapper(_result);
     }
 

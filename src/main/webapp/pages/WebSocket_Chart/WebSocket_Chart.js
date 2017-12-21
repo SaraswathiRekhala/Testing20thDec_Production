@@ -1,4 +1,4 @@
-Application.$controller("SV_ChartsPageController", ["$scope", function ($scope) {
+Application.$controller("WebSocket_ChartPageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */

@@ -19,7 +19,6 @@ import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.model.Downloadable;
 
 import com.testing20thdec_production.hrdb.Department;
-import com.testing20thdec_production.hrdb.Employee;
 
 /**
  * Service object for domain model class {@link Department}.
@@ -151,17 +150,6 @@ public interface DepartmentService {
 	 */
 	Page<Map<String, Object>> getAggregatedValues(AggregationInfo aggregationInfo, Pageable pageable);
 
-    /*
-     * Returns the associated employees for given Department id.
-     *
-     * @param deptId value of deptId; value cannot be null
-     * @param pageable Details of the pagination information along with the sorting options. If null returns all matching records.
-     * @return Paginated list of associated Employee instances.
-     *
-     * @see Pageable
-     * @see Page
-     */
-    Page<Employee> findAssociatedEmployees(Integer deptId, Pageable pageable);
 
 }
 

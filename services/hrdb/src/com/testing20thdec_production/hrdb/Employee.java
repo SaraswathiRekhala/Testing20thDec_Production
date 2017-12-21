@@ -44,13 +44,11 @@ public class Employee implements Serializable {
     private Date birthdate;
     private String picurl;
     private String jobTitle;
-    private Integer deptId;
     private String username;
     private String password;
     private String role;
     private Integer managerId;
     private Integer tenantId;
-    private Department department;
     private Employee employeeByManagerId;
     private List<Employee> employeesForManagerId;
     private List<Vacation> vacations;
@@ -147,15 +145,6 @@ public class Employee implements Serializable {
         this.jobTitle = jobTitle;
     }
 
-    @Column(name = "`DEPT_ID`", nullable = true, scale = 0, precision = 10)
-    public Integer getDeptId() {
-        return this.deptId;
-    }
-
-    public void setDeptId(Integer deptId) {
-        this.deptId = deptId;
-    }
-
     @Column(name = "`USERNAME`", nullable = true, length = 255)
     public String getUsername() {
         return this.username;
@@ -199,20 +188,6 @@ public class Employee implements Serializable {
 
     public void setTenantId(Integer tenantId) {
         this.tenantId = tenantId;
-    }
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "`DEPT_ID`", referencedColumnName = "`DEPT_ID`", insertable = false, updatable = false, foreignKey = @ForeignKey(name = "`DEPTFKEY`"))
-    public Department getDepartment() {
-        return this.department;
-    }
-
-    public void setDepartment(Department department) {
-        if(department != null) {
-            this.deptId = department.getDeptId();
-        }
-
-        this.department = department;
     }
 
     // ignoring self relation properties to avoid circular loops.

@@ -4,6 +4,16 @@
   "roles" : [ ],
   "httpMethod" : null
 }, {
+  "urlPattern" : "/pages/QueryService_AllTypesCharts/**",
+  "permission" : "Authenticated",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/WebSocket_Chart/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
   "urlPattern" : "/**",
   "permission" : "Authenticated",
   "roles" : null,

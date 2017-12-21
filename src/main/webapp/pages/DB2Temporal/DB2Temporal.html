@@ -1,0 +1,55 @@
+<wm-page data-ng-controller="DB2TemporalPageController" pagetitle="Db 2 Temporal" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-accordion name="accordion1">
+                <wm-accordionpane name="accordionpane1" title="Select Stmt For POLICY">
+                    <wm-table name="executeSV_SystemTemporalTable1" title="" dataset="bind:Variables.SCHOOLDBExecuteSV_SystemTemporal.dataSet" navigation="Pager" exportformat="EXCEL,CSV">
+                        <wm-table-column binding="coverageAmt" caption="Coverage Amt" edit-widget-type="number" type="integer" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="annualMileage" caption="Annual Mileage" edit-widget-type="number" type="integer" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="sqlOperation" caption="Sql Operation" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="sysEnd" caption="Sys End" edit-widget-type="timestamp" type="timestamp" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="rentalCar" caption="Rental Car" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="vin" caption="Vin" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="id" caption="Id" edit-widget-type="number" type="integer" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="sysStart" caption="Sys Start" edit-widget-type="timestamp" type="timestamp" show="true" readonly="false"></wm-table-column>
+                    </wm-table>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane2" title="LiveVariable for POLICY">
+                    <wm-table editmode="inline" name="PolicyTable1" title="Policy List" dataset="bind:Variables.SCHOOLDBPolicyData.dataSet" navigation="Basic" exportformat="EXCEL,CSV">
+                        <wm-table-column binding="id" caption="Id" primary-key="true" edit-widget-type="number" type="integer" generator="assigned" show="true" readonly="false" required="true"></wm-table-column>
+                        <wm-table-column binding="vin" caption="Vin" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="annualMileage" caption="Annual Mileage" edit-widget-type="number" type="integer" generator="assigned" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="rentalCar" caption="Rental Car" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="coverageAmt" caption="Coverage Amt" edit-widget-type="number" type="integer" generator="assigned" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="sysStart" caption="Sys Start" edit-widget-type="timestamp" type="timestamp" generator="assigned" readonly="true" show="true"></wm-table-column>
+                        <wm-table-column binding="sysEnd" caption="Sys End" edit-widget-type="timestamp" type="timestamp" generator="assigned" readonly="true" show="true"></wm-table-column>
+                        <wm-table-column binding="transStart" caption="Trans Start" edit-widget-type="timestamp" type="timestamp" generator="assigned" readonly="true" show="true"></wm-table-column>
+                        <wm-table-column binding="sqlOperation" caption="Sql Operation" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="rowOperations" caption="Actions" width="120px" type="custom" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column>
+                        <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false"></wm-table-action>
+                        <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-table-row-action>
+                        <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-table-row-action>
+                    </wm-table>
+                </wm-accordionpane>
+                <wm-accordionpane name="accordionpane3" title="Query BiTemporal">
+                    <wm-table name="executeSV_BiTemporalTable1" title="" dataset="bind:Variables.SCHOOLDBExecuteSV_BiTemporal1.dataSet" navigation="Basic" exportformat="EXCEL,CSV">
+                        <wm-table-column binding="annualMileage" caption="Annual Mileage" edit-widget-type="number" type="integer" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="coverageAmt" caption="Coverage Amt" edit-widget-type="number" type="integer" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="sqlOperation" caption="Sql Operation" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="busStart" caption="Bus Start" edit-widget-type="date" type="date" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="sysEnd" caption="Sys End" edit-widget-type="timestamp" type="timestamp" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="rentalCar" caption="Rental Car" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="vin" caption="Vin" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="busEnd" caption="Bus End" edit-widget-type="date" type="date" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="id" caption="Id" edit-widget-type="number" type="integer" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="sysStart" caption="Sys Start" edit-widget-type="timestamp" type="timestamp" show="true" readonly="false"></wm-table-column>
+                    </wm-table>
+                </wm-accordionpane>
+            </wm-accordion>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

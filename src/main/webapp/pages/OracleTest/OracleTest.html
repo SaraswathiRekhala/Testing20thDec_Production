@@ -122,7 +122,7 @@
                 <wm-tabpane name="tabpane3" title="Insert Query With ServerDef">
                     <wm-button class="btn-default" caption="Insert Query" type="button" margin="unset 0.5em" name="button7" on-click="Widgets.wmstudioexecutesvinsertqueryserverdefDialog.open()"></wm-button>
                 </wm-tabpane>
-                <wm-tabpane name="tabpane4">
+                <wm-tabpane name="tabpane4" title="Filter Check">
                     <wm-livefilter name="AlltypesNewChangesFilter1" title="Filter Alltypes_new_changes" dataset="bind:Variables.WMSTUDIOAlltypesNewChangesData.dataSet" captionalign="left" captionposition="top" autoupdate="false">
                         <wm-layoutgrid columns="2" name="layoutgrid4">
                             <wm-gridrow name="gridrow18">
@@ -319,6 +319,28 @@
                             <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
                         </wm-liveform>
                     </wm-livetable>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane5" title="Cursor Data">
+                    <wm-table name="executeProcedure_2CursorsTable1" title="" dataset="bind:Variables.WMSTUDIOExecuteProcedure_2Cursors.dataSet.jobsdata" navigation="Basic">
+                        <wm-table-column binding="jobId" caption="Job Id" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                        <wm-table-column binding="maxSalary" caption="Max Salary" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column>
+                        <wm-table-column binding="jobTitle" caption="Job Title" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                        <wm-table-column binding="minSalary" caption="Min Salary" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column>
+                    </wm-table>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane6" title="Cursor Data">
+                    <wm-table name="executeProcedure_2CursorsTable2" title="" dataset="bind:Variables.WMSTUDIOExecuteProcedure_2Cursors.dataSet.regionsdata" navigation="Basic" on-click="Actions.navigateToCursor.invoke()">
+                        <wm-table-column binding="regionId" caption="Region Id" pcdisplay="true" mobiledisplay="true" type="double"></wm-table-column>
+                        <wm-table-column binding="regionName" caption="Region Name" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                    </wm-table>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane7">
+                    <wm-table name="executeSV_CustomQueryTable1" title="" dataset="bind:Variables.WMSTUDIOExecuteSV_CustomQuery.dataSet" navigation="Pager" exportformat="EXCEL,CSV">
+                        <wm-table-column binding="intCol" caption="Int Col" edit-widget-type="number" type="integer" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="intId" caption="Int Id" edit-widget-type="number" type="integer" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="charCol" caption="Char Col" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="stringCol" caption="String Col" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                    </wm-table>
                 </wm-tabpane>
             </wm-tabs>
         </wm-page-content>

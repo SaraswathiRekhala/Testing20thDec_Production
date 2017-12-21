@@ -2,29 +2,6 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <sql-query name="SV_InsertQuery">
-        <![CDATA[
-        insert into "ALLTYPES_NEW_CHANGES"("INT ID","BYTE COL","SHORT COL","INT COL","FLOAT COL","DOUBLE COL","BIGINT COL","BIGDEC COL","CHAR COL","STRING COL","BOOLEAN COL","BOOLEAN_COL_Y_N","DATETIME COL","TIMESTAMP COL","BLOB COL","TEXT COL","CLOB COL") values(:PK_COLUMN,:BYTE_COLUMN,:SHORT_COLUMN,:INT_COLUMN,:FLOAT_COLUMN,:DOUBLE_COLUMN,:BIGINT_COLUMN,:BIGDEC_COLUMN,:CHAR_COLUMN,:STRING_COLUMN,:BOOLEAN_COLUMN,:BOOLEAN_Y_N_COLUMN,:DATETIME_COLUMN,:TIMESTAMP_COLUMN,:BLOB_COLUMN,:TEXT_COLUMN,:CLOB_COLUMN)
-        ]]>
-    <query-param name="PK_COLUMN" type="java.lang.Integer"/>
-    <query-param name="BYTE_COLUMN" type="java.lang.Byte"/>
-    <query-param name="SHORT_COLUMN" type="java.lang.Short"/>
-    <query-param name="INT_COLUMN" type="java.lang.Integer"/>
-    <query-param name="FLOAT_COLUMN" type="java.lang.Float"/>
-    <query-param name="DOUBLE_COLUMN" type="java.lang.Double"/>
-    <query-param name="BIGINT_COLUMN" type="java.math.BigInteger"/>
-    <query-param name="BIGDEC_COLUMN" type="java.math.BigDecimal"/>
-    <query-param name="CHAR_COLUMN" type="java.lang.Character"/>
-    <query-param name="STRING_COLUMN" type="java.lang.String"/>
-    <query-param name="BOOLEAN_COLUMN" type="java.lang.Boolean"/>
-    <query-param name="BOOLEAN_Y_N_COLUMN" type="java.lang.Character"/>
-    <query-param name="DATETIME_COLUMN" type="org.joda.time.LocalDateTime"/>
-    <query-param name="TIMESTAMP_COLUMN" type="java.sql.Timestamp"/>
-    <query-param name="BLOB_COLUMN" type="byte[]"/>
-    <query-param name="TEXT_COLUMN" type="java.lang.String"/>
-    <query-param name="CLOB_COLUMN" type="java.lang.String"/>
-    </sql-query>
-
     <sql-query name="SV_InsertQuery_ServerDef">
         <![CDATA[
         insert into "ALLTYPES_NEW_CHANGES"("INT ID","BYTE COL","SHORT COL","INT COL","FLOAT COL","DOUBLE COL","BIGINT COL","BIGDEC COL","CHAR COL","STRING COL","BOOLEAN COL","BOOLEAN_COL_Y_N","DATETIME COL","TIMESTAMP COL","BLOB COL","TEXT COL","CLOB COL") values(:PK_COLUMN,:SERVER__USER_ID__BYTE_COLUMN,:SHORT_COLUMN,:SERVER__USER_ID__INT_COLUMN,:FLOAT_COLUMN,:DOUBLE_COLUMN,:BIGINT_COLUMN,:BIGDEC_COLUMN,:CHAR_COLUMN,:SERVER__USER_NAME__STRING_COLUMN,:BOOLEAN_COLUMN,:BOOLEAN_Y_N_COLUMN,:SERVER__DATE_TIME__DATETIME_COLUMN,:TIMESTAMP_COLUMN,:BLOB_COLUMN,:TEXT_COLUMN,:CLOB_COLUMN)
@@ -42,6 +19,41 @@
     <query-param name="BOOLEAN_COLUMN" type="java.lang.Boolean"/>
     <query-param name="BOOLEAN_Y_N_COLUMN" type="java.lang.Character"/>
     <query-param name="SERVER__DATE_TIME__DATETIME_COLUMN" type="org.joda.time.LocalDateTime"/>
+    <query-param name="TIMESTAMP_COLUMN" type="java.sql.Timestamp"/>
+    <query-param name="BLOB_COLUMN" type="byte[]"/>
+    <query-param name="TEXT_COLUMN" type="java.lang.String"/>
+    <query-param name="CLOB_COLUMN" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="SV_CustomQuery">
+        <![CDATA[
+        select "INT COL","INT ID","CHAR COL","STRING COL" from ALLTYPES_NEW_CHANGES
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_CustomQuery__count">
+        <![CDATA[
+        select count(*) from (select "INT COL","INT ID","CHAR COL","STRING COL" from ALLTYPES_NEW_CHANGES) wmTempTable
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_InsertQuery">
+        <![CDATA[
+        insert into "ALLTYPES_NEW_CHANGES"("INT ID","BYTE COL","SHORT COL","INT COL","FLOAT COL","DOUBLE COL","BIGINT COL","BIGDEC COL","CHAR COL","STRING COL","BOOLEAN COL","BOOLEAN_COL_Y_N","DATETIME COL","TIMESTAMP COL","BLOB COL","TEXT COL","CLOB COL") values(:PK_COLUMN,:BYTE_COLUMN,:SHORT_COLUMN,:INT_COLUMN,:FLOAT_COLUMN,:DOUBLE_COLUMN,:BIGINT_COLUMN,:BIGDEC_COLUMN,:CHAR_COLUMN,:STRING_COLUMN,:BOOLEAN_COLUMN,:BOOLEAN_Y_N_COLUMN,:DATETIME_COLUMN,:TIMESTAMP_COLUMN,:BLOB_COLUMN,:TEXT_COLUMN,:CLOB_COLUMN)
+        ]]>
+    <query-param name="PK_COLUMN" type="java.lang.Integer"/>
+    <query-param name="BYTE_COLUMN" type="java.lang.Byte"/>
+    <query-param name="SHORT_COLUMN" type="java.lang.Short"/>
+    <query-param name="INT_COLUMN" type="java.lang.Integer"/>
+    <query-param name="FLOAT_COLUMN" type="java.lang.Float"/>
+    <query-param name="DOUBLE_COLUMN" type="java.lang.Double"/>
+    <query-param name="BIGINT_COLUMN" type="java.math.BigInteger"/>
+    <query-param name="BIGDEC_COLUMN" type="java.math.BigDecimal"/>
+    <query-param name="CHAR_COLUMN" type="java.lang.Character"/>
+    <query-param name="STRING_COLUMN" type="java.lang.String"/>
+    <query-param name="BOOLEAN_COLUMN" type="java.lang.Boolean"/>
+    <query-param name="BOOLEAN_Y_N_COLUMN" type="java.lang.Character"/>
+    <query-param name="DATETIME_COLUMN" type="org.joda.time.LocalDateTime"/>
     <query-param name="TIMESTAMP_COLUMN" type="java.sql.Timestamp"/>
     <query-param name="BLOB_COLUMN" type="byte[]"/>
     <query-param name="TEXT_COLUMN" type="java.lang.String"/>
