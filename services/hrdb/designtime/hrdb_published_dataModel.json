@@ -1178,10 +1178,10 @@
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
-        "defaultValue" : null,
+        "defaultValue" : "",
         "type" : "user-defined"
       },
-      "constraintList" : null,
+      "constraintList" : [ ],
       "fieldName" : "deptCode",
       "foreignKey" : false,
       "generatorType" : "assigned",

@@ -338,6 +338,13 @@
             <scope>system</scope>
             <systemPath>${project.lib.directory}/ojdbc7.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>sqljdbc42</groupId>
+            <artifactId>sqljdbc42</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.lib.directory}/sqljdbc42.jar</systemPath>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
